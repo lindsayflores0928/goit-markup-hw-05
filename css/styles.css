@@ -160,10 +160,9 @@ body {
 }
 
 .active {
-    color: var(--OCEAN);
+    color: var(--OCEAN)
 }
 
-/*for HW5
 .active::after {
     content: " ";
     display: block;
@@ -173,10 +172,22 @@ body {
     background-color: var(--IRIS);
     position: relative;
     top: 15px;
-} */
+}
 
+/*.active::after {
+    content: '';
+    display: block;
+    width: 48%;
+    height: 48px;
+    /* Adjust the thickness of the underline */
+background-color: var(--NAVY-BLUE);
+position: absolute;
+bottom: -29px;
+/* Adjust the offset position, e.g., 10px below the text */
+left: 0;
+}
 
-.contacts {
+*/ .contacts {
     color: var(--SLATE, #434455);
     line-height: 1.5;
     letter-spacing: 0.32px;
@@ -188,6 +199,9 @@ body {
     padding-top: 188px;
     padding-bottom: 188px;
     text-align: center;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(..//images/office.jpg);
+    background-size: cover;
+    position: relative;
 }
 
 .hero-text {
@@ -202,11 +216,12 @@ body {
 
 .hero-btn {
     background-color: var(--IRIS);
+    color: var(--WHITE);
     border: none;
     border-radius: 4px;
-    color: var(--WHITE);
     padding: 16px 32px;
 }
+
 
 .hero-btn:hover {
     cursor: pointer;
@@ -241,7 +256,8 @@ body {
 .menu-team-socials {
     display: flex;
     justify-content: center;
-    padding-bottom: 100px;
+    align-items: center;
+    gap: 24px;
 }
 
 /*team-socials-icon*/
@@ -325,6 +341,37 @@ body {
 .projects li img {
     width: 100%;
 }
+
+.projects-buttons {
+    height: 48px;
+    padding: 12px 24px;
+    border: none;
+    gap: 24px border-radius: 4px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.projects-buttons.active {
+    width: 69px;
+    background: #404BBF;
+    box-shadow: 0px 2px 2px 0px #0000001F, 0px 2px 1px 0px #00000014, 0px 3px 1px 0px #0000001A;
+    color: #fff;
+}
+
+.projects-buttons:not(.active) {
+    background: linear-gradient(0deg, #F4F4FD, #F4F4FD), linear-gradient(0deg, #E7E9FC, #E7E9FC);
+    border: 1px solid #E7E9FC;
+    color: #4D5AE5;
+    /* Text color for inactive buttons */
+}
+
 
 /*.logo {
     text-decoration: none;
