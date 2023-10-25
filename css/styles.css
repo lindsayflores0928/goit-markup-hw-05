@@ -309,6 +309,10 @@ left: 0;
     color: var(--CLOUD)
 }
 
+.footer {
+    padding: 120px;
+}
+
 .footer-text {
     color: var(--CLOUD);
     line-height: 1.5;
