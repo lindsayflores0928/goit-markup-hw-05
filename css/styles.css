@@ -174,20 +174,7 @@ body {
     top: 15px;
 }
 
-/*.active::after {
-    content: '';
-    display: block;
-    width: 48%;
-    height: 48px;
-    /* Adjust the thickness of the underline */
-background-color: var(--NAVY-BLUE);
-position: absolute;
-bottom: -29px;
-/* Adjust the offset position, e.g., 10px below the text */
-left: 0;
-}
-
-*/ .contacts {
+.link.contacts {
     color: var(--SLATE, #434455);
     line-height: 1.5;
     letter-spacing: 0.32px;
@@ -333,6 +320,7 @@ left: 0;
 }
 
 /* PORTFOLIO STYLING */
+
 .projects ul {
     width: 100%;
     flex-wrap: wrap;
@@ -346,38 +334,162 @@ left: 0;
     width: 100%;
 }
 
+.projects {
+    padding-top: 69px;
+    padding-bottom: 120px;
+}
+
+.container {
+    padding-top: 72px;
+}
+
+.projects-buttons-a {
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
 .projects-buttons {
-    height: 48px;
+    color: var(--IRIS);
+    border-radius: 4px;
+    border: 1px solid var(--CORNFLOWER);
+    background: var(--CLOUD);
     padding: 12px 24px;
-    border: none;
-    gap: 24px border-radius: 4px;
-    font-family: Roboto;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
-    letter-spacing: 0.04em;
-    text-align: center;
-    cursor: pointer;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    letter-spacing: 0.64px;
+    transition: 1s;
 }
 
-.projects-buttons.active {
-    width: 69px;
-    background: #404BBF;
-    box-shadow: 0px 2px 2px 0px #0000001F, 0px 2px 1px 0px #00000014, 0px 3px 1px 0px #0000001A;
-    color: #fff;
+.projects-buttons:hover,
+.projects-buttons:focus {
+    color: var(--WHITE);
+    background-color: var(--IRIS);
+    transition: 0s;
 }
 
-.projects-buttons:not(.active) {
-    background: linear-gradient(0deg, #F4F4FD, #F4F4FD), linear-gradient(0deg, #E7E9FC, #E7E9FC);
-    border: 1px solid #E7E9FC;
-    color: #4D5AE5;
-    /* Text color for inactive buttons */
+.container .menu {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .menu-cont img {
+    width: 100%;
+    display: block;
+}
+
+.container .menu-cont {
+    width: 25%;
+    border: 1px solid var(--CORNFLOWER);
+}
+
+.project-caption {
+    flex-direction: column;
+    padding: 32px 16px;
+    background: var(--WHITE);
+}
+
+.p-card {
+    color: var(--NAVY-BLUE);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    margin-bottom: 8px;
+}
+
+.container {
+    overflow: hidden;
+}
+
+.p-menu-cont {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-caption-a {
+    position: absolute;
+    background-color: rgba(77, 90, 229, 0.7);
+    color: white;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-cont:hover .project-caption-a {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-caption-a {
+    padding: 40px 32px;
 }
 
 /*modal*/
 .backdrop {
+    background-color: var(--NAVY-BLUE-modal);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+    background-color: var(--DAIRY);
+    width: 408px;
+    height: 584px;
+    border-radius: 4px;
+    padding: 24px;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+        0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+}
+
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-close-btn {
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--CORNFLOWER);
+    width: 30px;
+    height: 30px;
+    color: var(--NAVY-BLUE);
+    margin-left: auto;
+    display: block;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-close-btn:hover {
+    fill: currentColor;
+    border: 1px solid currentColor;
+}
+
+
+
+
+
+/*.backdrop {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
@@ -421,10 +533,7 @@ left: 0;
 .modal-close-btn:hover {
     fill: currentColor;
     border: 1px solid currentColor;
-}
-
-
-
+}*/
 
 /*.logo {
     text-decoration: none;
